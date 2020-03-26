@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Hello</title>
+    </head>
+<body>
+    <a href="/tps/tp1/ex1/test.php?message=bonjour" >Dire bonjour à Tom</a>
+    <br>
+    <a href="/tps/tp1/ex1/test.php?message=salut, va !">Dire bonjour à Louis</a>
+    <br>
+    <a href="/tps/tp1/ex1/test.php?message=ouep">Dire bonjour à Henri</a>
+    <br>
+    <br>
+        <?php
+    echo "Bonjour, votre message est : ";
+    echo $_GET["message"];
+    ?>
+</body>
+</html>
