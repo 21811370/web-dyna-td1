@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Prox Mox</title>
+    </head>
+<body>
+    <table border='1'>
+    <tbody>
+    <form method="POST">
+        <label for="message">colonnes : </label>
+        <input type="number" value="" name="col" id="message">
+        <label for="size">lignes : </label>
+        <input type="number" value="" name="lig" id="message">
+        <input type="submit" value="Valider" name="submit">
+    </form>
+        
+        
+        
+        <?php
+            $col=$_POST['col']??1;
+            $lig=$_POST['lig']??1;
+        
+    
+            for($i=1;$i<$lig+1;$i++){
+                echo "<tr>";
+                for($j=1;$j<$col+1;$j++){
+                    if ($i % 2){
+                        if ($j % 2){
+                            echo "<td><b><font color='red'>$i-$j</font></b></td>";
+                        }else{
+                            echo "<td><b>$i-$j</b></td>";
+                        }
+                    }else{
+                        if ($j % 2){
+                            echo "<td><font color='red'>$i-$j</font></td>";
+                        }else{
+                            echo "<td>$i-$j</td>";
+                        }
+                    }
+                }
+                echo"</tr>";
+            }
+            ?>
+    </tbody>
+</table>
+</body>
+</html>
